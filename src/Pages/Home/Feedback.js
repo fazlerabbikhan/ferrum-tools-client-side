@@ -29,7 +29,7 @@ const Feedback = () => {
                     placeholder='Your message'
                     rows={6}
                 ></textarea>
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary text-white">Submit</button>
             </div>
         </div>
     );
