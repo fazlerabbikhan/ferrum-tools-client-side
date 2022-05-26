@@ -6,8 +6,8 @@ const Banner = () => {
         <div style={{
             background: `url(${banner})`,
             backgroundSize: 'cover'
-        }} className='bg-primary max-h-screen rounded-lg'>
-            <div className='text-center py-40 text-white'>
+        }} className='bg-primary rounded-lg'>
+            <div className='text-center py-60 text-white'>
                 <p className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-secondary'>
                     Welcome to Ferrum Tools!
                 </p>

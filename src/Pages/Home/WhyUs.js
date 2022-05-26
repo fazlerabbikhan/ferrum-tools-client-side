@@ -3,7 +3,7 @@ import whyus from '../../images/whyus.jpg'
 
 const WhyUs = () => {
     return (
-        <div className="hero min-h-screen">
+        <div className="hero mt-20">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={whyus} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>

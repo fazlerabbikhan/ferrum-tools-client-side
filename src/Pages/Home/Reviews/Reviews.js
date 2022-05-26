@@ -27,8 +27,8 @@ const Reviews = () => {
         },
     ];
     return (
-        <div>
-            <section className='my-28'>
+        <div className='mt-20'>
+            <section>
                 <div className='flex justify-between'>
                     <div>
                         <h4 className="text-4xl text-primary font-bold">Reviews</h4>

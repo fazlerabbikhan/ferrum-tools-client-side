@@ -6,7 +6,7 @@ const Feedback = () => {
         <div style={{
             background: `url(${feedback})`,
             backgroundSize: 'cover'
-        }} className='bg-primary py-5 rounded-lg'>
+        }} className='bg-primary py-5 rounded-lg mt-20'>
             <div className='text-center pb-5 text-white'>
                 <p className='text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-accent to-secondary'>
                     Feedback

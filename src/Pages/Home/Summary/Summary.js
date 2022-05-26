@@ -7,7 +7,7 @@ import SummaryCard from './SummaryCard';
 
 const Summary = () => {
     return (
-        <div>
+        <div className='mt-20'>
             <h1 className='text-4xl my-10 text-primary font-bold text-center'>Business Summary</h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
                 <SummaryCard cardTitle="1M+ Tools Sold" bgClass="bg-gradient-to-r from-secondary to-primary" img={tools}></SummaryCard>
