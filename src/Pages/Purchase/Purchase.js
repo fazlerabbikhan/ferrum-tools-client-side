@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import PurchaseModal from './PurchaseModal';
 
 const Purchase = () => {
     const { toolId } = useParams();
@@ -25,10 +26,11 @@ const Purchase = () => {
                     <p>Available Quantity: {tool.available}</p>
                     <p>Price Per Unit: {tool.price}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary text-white">Purchase Now</button>
+                        <label for="purchaseModal" className="btn btn-primary text-white">Purchase Now</label>
                     </div>
                 </div>
             </div>
+            {<PurchaseModal tool={tool}></PurchaseModal>}
         </div>
     );
 };

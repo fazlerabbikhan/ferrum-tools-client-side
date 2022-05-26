@@ -24,7 +24,10 @@ const Tool = ({ tool }) => {
                 }</p>
                 <p>Price Per Unit: {price}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={() => navigateToPurchase(_id)} disabled={available < minimumOrder} className="btn btn-primary text-white">Go to Purchase</button>
+                    <button
+                        onClick={() => navigateToPurchase(_id)}
+                        disabled={available < minimumOrder}
+                        className="btn btn-primary text-white">Go to Purchase</button>
                 </div>
             </div>
         </div>

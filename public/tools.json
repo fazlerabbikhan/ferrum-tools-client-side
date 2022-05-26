@@ -4,8 +4,8 @@
         "name": "Drill Machine",
         "img": "https://i.ibb.co/svg8NTj/drill-machine.jpg",
         "shortDescription": "It is used to drill walls, wood etc; requires electricity.",
-        "minimumOrder": 10,
-        "available": 5000,
+        "minimumOrder": 20,
+        "available": 2000,
         "price": "৳5000"
     },
     {
@@ -13,8 +13,8 @@
         "name": "Hacksaw",
         "img": "https://i.ibb.co/SPZMXz5/hacksaw.jpg",
         "shortDescription": "It is used to cut wood.",
-        "minimumOrder": 10,
-        "available": 5000,
+        "minimumOrder": 20,
+        "available": 2000,
         "price": "৳2000"
     },
     {
@@ -22,8 +22,8 @@
         "name": "Glue Gun",
         "img": "https://i.ibb.co/hVXpqmv/glue-gun.jpg",
         "shortDescription": "It is used to put glue within tiny holes.",
-        "minimumOrder": 10,
-        "available": 5000,
+        "minimumOrder": 20,
+        "available": 2000,
         "price": "৳2300"
     },
     {
@@ -31,17 +31,17 @@
         "name": "Hammer Set",
         "img": "https://i.ibb.co/sRmpt7q/hammer-set.jpg",
         "shortDescription": "These are used to nail on walls, wood etc.",
-        "minimumOrder": 10,
-        "available": 5000,
+        "minimumOrder": 20,
+        "available": 2000,
         "price": "৳6300"
     },
     {
         "_id": 5,
         "name": "Screwdriver Set",
         "img": "https://i.ibb.co/kXYYzYz/screwdriver-set.jpg",
-        "shortDescription": "These are used push or pull screws.",
-        "minimumOrder": 10,
-        "available": 5000,
+        "shortDescription": "These are used to push or pull screws.",
+        "minimumOrder": 20,
+        "available": 2000,
         "price": "৳1600"
     },
     {
@@ -49,8 +49,8 @@
         "name": "Pliers Set",
         "img": "https://i.ibb.co/djpVV7k/pliers-set.jpg",
         "shortDescription": "These are used to hold or tighten nuts.",
-        "minimumOrder": 10,
-        "available": 9,
+        "minimumOrder": 20,
+        "available": 15,
         "price": "৳1300"
     }
 ]
