@@ -26,7 +26,7 @@ const Purchase = () => {
                     <p>Available Quantity: {tool.available}</p>
                     <p>Price Per Unit: {tool.price}</p>
                     <div className="card-actions justify-end">
-                        <label for="purchaseModal" className="btn btn-primary text-white">Purchase Now</label>
+                        <label htmlFor="purchaseModal" className="btn btn-primary text-white">Purchase Now</label>
                     </div>
                 </div>
             </div>
