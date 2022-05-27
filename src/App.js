@@ -10,6 +10,7 @@ import SignUp from './Pages/Login/SignUp';
 import RequireAuth from './Pages/Login/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NotFound from './Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Purchase />
           </RequireAuth>
         } />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <ToastContainer />
     </div>
