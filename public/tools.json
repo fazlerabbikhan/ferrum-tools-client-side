@@ -6,7 +6,7 @@
         "shortDescription": "It is used to drill walls, wood etc; requires electricity.",
         "minimumOrder": 20,
         "available": 2000,
-        "price": "৳5000"
+        "price": 5000
     },
     {
         "_id": 2,
@@ -15,7 +15,7 @@
         "shortDescription": "It is used to cut wood.",
         "minimumOrder": 20,
         "available": 2000,
-        "price": "৳2000"
+        "price": 2000
     },
     {
         "_id": 3,
@@ -24,7 +24,7 @@
         "shortDescription": "It is used to put glue within tiny holes.",
         "minimumOrder": 20,
         "available": 2000,
-        "price": "৳2300"
+        "price": 2300
     },
     {
         "_id": 4,
@@ -33,7 +33,7 @@
         "shortDescription": "These are used to nail on walls, wood etc.",
         "minimumOrder": 20,
         "available": 2000,
-        "price": "৳6300"
+        "price": 6300
     },
     {
         "_id": 5,
@@ -42,7 +42,7 @@
         "shortDescription": "These are used to push or pull screws.",
         "minimumOrder": 20,
         "available": 2000,
-        "price": "৳1600"
+        "price": 1600
     },
     {
         "_id": 6,
@@ -51,6 +51,6 @@
         "shortDescription": "These are used to hold or tighten nuts.",
         "minimumOrder": 20,
         "available": 15,
-        "price": "৳1300"
+        "price": 1300
     }
 ]

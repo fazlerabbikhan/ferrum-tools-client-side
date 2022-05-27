@@ -1,12 +1,49 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const PurchaseModal = ({ tool }) => {
-    const { name, minimumOrder, available } = tool;
+    const { _id, name, minimumOrder, available, price } = tool;
     const [user, loading, error] = useAuthState(auth);
 
-    const [amount, setAmount] = useState();
+    const [amount, setAmount] = useState(minimumOrder);
+
+    const totalPrice = price * amount;
+
+    const navigate = useNavigate();
+
+    const handleOrder = event => {
+        event.preventDefault();
+
+        const order = {
+            toolId: _id,
+            toolName: name,
+            pricePerUnit: price,
+            unitAmount: parseInt(amount),
+            totalPrice: totalPrice,
+            customerName: user.displayName,
+            customerEmail: user.email,
+            customerPhone: event.target.phone.value,
+            customerAddress: event.target.address.value,
+        }
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+
+        toast('Order has been placed.');
+        navigate('/');
+    }
 
     return (
         <div>
@@ -15,14 +52,15 @@ const PurchaseModal = ({ tool }) => {
                 <div className="modal-box">
                     <label htmlFor="purchaseModal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="font-bold text-center text-accent">Purchase {name}</h3>
-                    <form className='grid grid-cols-1 mt-5 gap-5 justify-items-center'>
-                        <input type="number" defaultValue={minimumOrder} placeholder="Amount" step="10" min={minimumOrder} max={available} required
+                    <form onSubmit={handleOrder} className='grid grid-cols-1 mt-5 gap-5 justify-items-center'>
+                        <input type="number" placeholder="Amount" required
+                            step="10" min={minimumOrder} max={available}
                             onChange={event => setAmount(event.target.value)}
                             className="input input-bordered w-full max-w-xs" />
-                        <input type="text" name="name" required
+                        <input type="text" name="name" placeholder="Your name" required
                             disabled value={user?.displayName || ''}
                             className="input input-bordered w-full max-w-xs" />
-                        <input type="email" name="email" required
+                        <input type="email" name="email" placeholder="Your email" required
                             disabled value={user?.email || ''}
                             className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="phone" placeholder="Your phone number" required className="input input-bordered w-full max-w-xs" />

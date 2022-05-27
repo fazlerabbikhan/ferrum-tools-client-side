@@ -52,7 +52,7 @@ const SignUp = () => {
                             </label>
                             <input
                                 type="text"
-                                placeholder="Your Name"
+                                placeholder="Your name"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
@@ -72,7 +72,7 @@ const SignUp = () => {
                             </label>
                             <input
                                 type="email"
-                                placeholder="Your Email"
+                                placeholder="Your email"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
@@ -116,13 +116,13 @@ const SignUp = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Sign Up" />
+                        <input className='btn w-full max-w-xs text-white bg-accent' type="submit" value="Sign Up" />
                     </form>
-                    <p><small>Already have an account? <Link className='text-primary' to="/login">Please login</Link></small></p>
+                    <p><small>Already have an account? <Link className='text-primary' to="/login">Please Login</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn btn-outline bg-primary text-white"
                     >Continue with Google</button>
                 </div>
             </div>

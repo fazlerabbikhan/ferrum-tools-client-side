@@ -22,7 +22,7 @@ const Tool = ({ tool }) => {
                         ? <span>Available Quantity: {available}</span>
                         : <span className='text-red-500'>Not enough available.</span>
                 }</p>
-                <p>Price Per Unit: {price}</p>
+                <p>Price Per Unit in BDT: {price}</p>
                 <div className="card-actions justify-end">
                     <button
                         onClick={() => navigateToPurchase(_id)}
