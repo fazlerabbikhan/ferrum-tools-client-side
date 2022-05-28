@@ -7,7 +7,7 @@ const Purchase = () => {
     const [tool, setTool] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${toolId}`;
+        const url = `https://guarded-basin-69517.herokuapp.com/tools/${toolId}`;
 
         fetch(url)
             .then(res => res.json())

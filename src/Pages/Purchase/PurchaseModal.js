@@ -29,7 +29,7 @@ const PurchaseModal = ({ tool }) => {
             customerAddress: event.target.address.value,
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://guarded-basin-69517.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
