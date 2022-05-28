@@ -8,9 +8,9 @@ const PurchaseModal = ({ tool }) => {
     const { _id, name, minimumOrder, available, price } = tool;
     const [user, loading, error] = useAuthState(auth);
 
-    const [amount, setAmount] = useState(minimumOrder);
+    const [orderQuantity, setOrderQuantity] = useState(minimumOrder);
 
-    const totalPrice = price * amount;
+    const totalPrice = price * orderQuantity;
 
     const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const PurchaseModal = ({ tool }) => {
             toolId: _id,
             toolName: name,
             pricePerUnit: price,
-            unitAmount: parseInt(amount),
+            orderQuantity: parseInt(orderQuantity),
             totalPrice: totalPrice,
             customerName: user.displayName,
             customerEmail: user.email,
@@ -55,7 +55,7 @@ const PurchaseModal = ({ tool }) => {
                     <form onSubmit={handleOrder} className='grid grid-cols-1 mt-5 gap-5 justify-items-center'>
                         <input type="number" placeholder="Amount" required
                             step="10" min={minimumOrder} max={available}
-                            onChange={event => setAmount(event.target.value)}
+                            onChange={event => setOrderQuantity(event.target.value)}
                             className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="name" placeholder="Your name" required
                             disabled value={user?.displayName || ''}
@@ -66,12 +66,12 @@ const PurchaseModal = ({ tool }) => {
                         <input type="text" name="phone" placeholder="Your phone number" required className="input input-bordered w-full max-w-xs" />
                         <input type="text" name="address" placeholder="Your address" required className="input input-bordered w-full max-w-xs" />
                         <p>{
-                            amount < minimumOrder || amount > available
+                            orderQuantity < minimumOrder || orderQuantity > available
                                 ? <span className='text-red-500'>Amount must be between {minimumOrder} and {available}.</span>
                                 : <span></span>
                         }</p>
                         <input type="submit" value="Submit"
-                            disabled={amount < minimumOrder || amount > available}
+                            disabled={orderQuantity < minimumOrder || orderQuantity > available}
                             className="btn btn-accent w-full max-w-xs text-white" />
                     </form>
                 </div>

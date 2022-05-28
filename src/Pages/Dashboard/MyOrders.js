@@ -27,7 +27,7 @@ const MyOrders = () => {
                             <th>Email</th>
                             <th>Item</th>
                             <th>Price Per Unit</th>
-                            <th>Amount</th>
+                            <th>Quantity</th>
                             <th>Total Price</th>
                         </tr>
                     </thead>
@@ -39,7 +39,7 @@ const MyOrders = () => {
                                 <td>{order.customerEmail}</td>
                                 <td>{order.toolName}</td>
                                 <td>{order.pricePerUnit}</td>
-                                <td>{order.unitAmount}</td>
+                                <td>{order.orderQuantity}</td>
                                 <td>{order.totalPrice}</td>
                             </tr>)
                         }
