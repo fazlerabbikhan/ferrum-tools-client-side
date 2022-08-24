@@ -1,5 +1,4 @@
 import React from 'react';
-import quote from '../../../images/quote.svg'
 import tools from '../../../images/tools.svg'
 import clients from '../../../images/clients.svg'
 import feedbacks from '../../../images/feedbacks.svg'
