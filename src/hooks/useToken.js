@@ -6,7 +6,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            fetch(`https://guarded-basin-69517.herokuapp.com/users/${email}`, {
+            fetch(`https://ferrum-tools-server-side.onrender.com/users/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

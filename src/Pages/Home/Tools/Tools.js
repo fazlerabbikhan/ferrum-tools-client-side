@@ -5,7 +5,7 @@ const Tools = () => {
     const [tools, setTools] = useState([]);
 
     useEffect(() => {
-        fetch('https://guarded-basin-69517.herokuapp.com/tools')
+        fetch('https://ferrum-tools-server-side.onrender.com/tools')
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])

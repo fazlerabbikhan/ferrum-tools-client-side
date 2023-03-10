@@ -6,7 +6,7 @@ import UsersRow from './UsersRow';
 
 const Users = () => {
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://guarded-basin-69517.herokuapp.com/users', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://ferrum-tools-server-side.onrender.com/users', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

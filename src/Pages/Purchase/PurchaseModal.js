@@ -29,7 +29,7 @@ const PurchaseModal = ({ tool }) => {
             customerAddress: event.target.address.value,
         }
 
-        fetch('https://guarded-basin-69517.herokuapp.com/orders', {
+        fetch('https://ferrum-tools-server-side.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

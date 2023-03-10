@@ -22,7 +22,7 @@ const Navbar = () => {
         <li>{user ? <button className='btn btn-ghost font-bold' onClick={logout} >Sign Out</button> : <Link to='/login' className='font-bold'>Login</Link>}</li>
     </>
     return (
-        <div className="navbar bg-base-100 px-12">
+        <div className="navbar px-12">
             <div className="navbar">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case font-bold text-accent text-4xl">Ferrum Tools</Link>
+                <Link to='/' className="font-bold text-accent text-4xl">Ferrum Tools</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
