@@ -7,7 +7,7 @@ const Purchase = () => {
     const [tool, setTool] = useState([]);
 
     useEffect(() => {
-        const url = `https://ferrum-tools-server-side.onrender.com/tools/${toolId}`;
+        const url = `https://ferrum-tools-server-side.fly.dev/tools/${toolId}`;
 
         fetch(url)
             .then(res => res.json())

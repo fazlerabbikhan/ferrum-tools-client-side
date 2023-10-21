@@ -5,7 +5,7 @@ const Tools = () => {
     const [tools, setTools] = useState([]);
 
     useEffect(() => {
-        fetch('https://ferrum-tools-server-side.onrender.com/tools')
+        fetch('https://ferrum-tools-server-side.fly.dev/tools')
             .then(res => res.json())
             .then(data => setTools(data));
     }, [])

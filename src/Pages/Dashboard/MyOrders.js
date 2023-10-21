@@ -12,7 +12,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://ferrum-tools-server-side.onrender.com/customerorders?customerEmail=${user.email}`, {
+            fetch(`https://ferrum-tools-server-side.fly.dev/customerorders?customerEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`

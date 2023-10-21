@@ -6,7 +6,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            fetch(`https://ferrum-tools-server-side.onrender.com/users/${email}`, {
+            fetch(`https://ferrum-tools-server-side.fly.dev/users/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

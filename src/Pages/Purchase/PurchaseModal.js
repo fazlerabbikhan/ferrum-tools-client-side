@@ -29,7 +29,7 @@ const PurchaseModal = ({ tool }) => {
             customerAddress: event.target.address.value,
         }
 
-        fetch('https://ferrum-tools-server-side.onrender.com/orders', {
+        fetch('https://ferrum-tools-server-side.fly.dev/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
